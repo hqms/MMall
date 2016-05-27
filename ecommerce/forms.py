@@ -1,5 +1,5 @@
 from django.forms import ModelForm, Textarea, TextInput
-from django.forms.widgets import PasswordInput, DateInput
+from django.forms.widgets import PasswordInput, DateInput, HiddenInput
 from ecommerce.models import Customer, Cart
 
 __author__ = 'hakim'
@@ -25,4 +25,5 @@ class CartForm(ModelForm):
         widgets = {
             'delivery_name': TextInput({'class': 'form-control'}),
             'delivery_address': Textarea({'rows': 3, 'class': 'form-control'}),
+            'created_by': HiddenInput(),
         }
