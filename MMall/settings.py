@@ -174,3 +174,4 @@ PIPELINE_JS = {
 import twitter_bootstrap
 bootstrap_less = os.path.join(os.path.dirname(twitter_bootstrap.__file__), 'static', 'less')
 PIPELINE_LESS_ARGUMENTS = u'--include-path={}'.format(os.pathsep.join([bootstrap_less, BASE_DIR+'/static/less']))
+PIPELINE = { 'PIPELINE_ENABLED': False}
