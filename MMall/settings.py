@@ -117,6 +117,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -127,9 +128,11 @@ STATICFILES_FINDERS = (
 MEDIA_ROOT = BASE_DIR+'/media/'
 MEDIA_URL = '/media/'
 
+
 PIPELINE_COMPILERS = (
     'pipeline.compilers.less.LessCompiler',
 )
+
 
 PIPELINE_CSS = {
     'bootstrap': {
